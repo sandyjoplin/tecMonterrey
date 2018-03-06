@@ -1,0 +1,332 @@
+html {
+  min-height: 100%;
+  position: relative;
+}
+
+body {
+  margin: 0;
+  margin-bottom: 60px;
+  height: 100%;
+}
+
+footer {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  height: 60px;
+  color: white;
+  font-size: 16px;
+  font-family: 'Roboto-Thin';
+  z-index: 1;
+}
+.footer1{
+  width: 380px;
+  background: #fff;
+}
+.footer2{
+  margin-left: 400px;
+  background: #000;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  left: 0;
+}
+/*fonts*/
+
+@font-face {
+  font-family: 'Roboto-Bold';
+  src: url('fonts/Roboto-Bold.eot');
+  src: url('fonts/Roboto-Bold.woff') format('woff'), url('fonts/Roboto-Bold.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Roboto-Medium';
+  src: url('fonts/Roboto-Medium.eot');
+  src: url('fonts/Roboto-Medium.woff') format('woff'), url('fonts/Roboto-Medium.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Roboto-Light';
+  src: url('fonts/Roboto-Light.eot');
+  src: url('fonts/Roboto-Light.woff') format('woff'), url('fonts/Roboto-Light.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Roboto-Thin';
+  src: url('fonts/Roboto-Thin.eot');
+  src: url('fonts/Roboto-Thin.woff') format('woff'), url('fonts/Roboto-Thin.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.menuUno {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 400px;
+  background-color: #fff;
+  display: table-row;
+  padding-top: 5px;
+  border: none;
+}
+.shadow{
+  box-shadow: 0px 0px 15px #000;
+  z-index: 1;
+}
+.vistas {
+  margin-left: 400px;
+  margin-top: 0px;
+}
+.fAlign{
+padding-top: 15px;
+}
+.vcenter {
+  padding-top: 25vh;
+  padding-bottom: 25vh;
+}
+.alignMain{
+  padding-left: 50px;
+}
+/*Text*/
+.textFooter{
+ font-family: 'Roboto-Medium';
+}
+.textNegrita{
+  font-family: 'Roboto-Light';
+  letter-spacing: 3px;
+}
+.textMain{
+  font-size: 16px;
+  font-family: 'Roboto-Thin';
+  color: #fff;
+  text-align: justify;
+}
+.textTitle{
+ font-size: 65px;
+ font-family: 'Roboto-Medium';
+ color: #fff;
+}
+/*images*/
+
+.imgSocial {
+  width: 25px;
+  margin-right: 10px;
+}
+
+.imgFooter {
+  width: 70px;
+  position: relative;
+  bottom: 7px;
+}
+.imgLogo{
+  padding: 30px;
+  }
+  /*Background*/
+  .backTec{
+  background: url('../images/tec-de-mty.jpg') no-repeat center center;
+  position: fixed;
+  right: 0;
+  left: 400px;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+.backBlue {
+  height: 100vh;
+  background-color: transparent;
+  background-image: -webkit-linear-gradient(rgba(0, 81, 159, 0.89), rgba(0, 81, 159, 0.48));
+  background-image: -o-linear-gradient(rgba(0, 81, 159, 0.89), rgba(0, 81, 159, 0.48));
+  background-image: linear-gradient(rgba(0, 81, 159, 0.89), rgba(0, 81, 159, 0.48));
+}
+/*buttons*/
+.btnTec{
+  background: transparent;
+  border: 1px solid #fff;
+  color: #fff;
+  font-size: 22px;
+  height: 60px;
+  border-radius: 15px;
+  padding:0  25px;
+  margin-right:15px; 
+  outline: 0 !important;
+  font-family: 'Roboto-Thin';
+  letter-spacing: 2px;
+}
+.btnTec:hover , .btnTec:focus{
+  background: transparent;
+  border: 1px solid #fff;
+  color: #fff;
+  font-size: 22px;
+  height: 60px;
+  border-radius: 15px;
+  padding:0  25px;
+  margin-right:15px; 
+  font-family: 'Roboto-Thin';
+  letter-spacing: 2px;
+}
+.btnDona{
+  background: #004880;
+  color: #fff;
+  font-size: 30px;
+  padding: 10px 30px;
+  border-radius: 15px;
+  outline: 0 !important;
+}
+.btnDona:hover , .btnDona:focus {
+  background: #02589b;
+  color: #fff;
+  font-size: 30px;
+  padding: 10px 30px;
+  border-radius: 15px;
+}
+/*Nav*/
+.navList{
+  list-style: none;
+  padding: 0;
+  
+}
+.navList > li {
+  border-top: 1px solid  #a5a4a4;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+.navList > li > a {
+  list-style: none;
+  font-size: 16px;
+  color: #a5a4a4;
+  text-decoration: none;
+}
+.navListFooter{
+  list-style: none;
+  padding: 0;
+}
+.navListFooter > li {
+ display: inline-block;
+
+}
+.navListFooter > li > a {
+  list-style: none;
+  font-size: 8px;
+  color: #a5a4a4;
+  text-decoration: none;
+}
+
+/*search*/
+.icon-addon {
+  position: relative;
+  color:#cbcbcb;
+  display: block;
+  font-family: 'Roboto-Thin';
+}
+
+.icon-addon:after,
+.icon-addon:before {
+  display: table;
+  content: " ";
+}
+
+.icon-addon:after {
+  clear: both;
+}
+
+.icon-addon.addon-md .glyphicon,
+.icon-addon .glyphicon, 
+.icon-addon.addon-md .fa,
+.icon-addon .fa {
+  position: absolute;
+  z-index: 2;
+  left: 10px;
+  font-size: 14px;
+  width: 20px;
+  margin-left: -2.5px;
+  text-align: center;
+  padding: 10px 0;
+  top: 1px;
+}
+
+.icon-addon.addon-lg .form-control {
+  line-height: 1.33;
+  height: 40px;
+  font-size: 18px;
+  padding: 10px 16px 10px 40px;
+  border-radius: 25px !important;
+  width: 80%;
+  color:#cbcbcb !important;
+}
+
+.icon-addon.addon-lg .fa,
+.icon-addon.addon-lg .glyphicon {
+  font-size: 18px;
+  margin-left: 0;
+  left: 50px;
+  top: 4px;
+ color:#cbcbcb;
+}
+
+@media screen and (max-width: 768px) {
+  .vistas {
+    margin-left: 0px;
+  }
+  body {
+    margin: 0;
+    margin-bottom: 100px;
+    height: 100%;
+  }
+   .footer2 {
+    margin-left: 0px;
+    height: 100px;
+  }
+  .fAlign{
+    padding-top: 15px;
+    text-align: center !important;
+    }
+  .backTec{
+    left:0px;
+  }
+  .textTitle{
+    font-size: 45px;
+  }
+  .alignMain{
+   padding: 15px;
+ }
+ .vcenter {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+.btnTec{
+  background: transparent;
+  border: 1px solid #fff;
+  color: #fff;
+  font-size: 16px;
+  height: 60px;
+  border-radius: 15px;
+  padding:0  25px;
+  margin-right:15px; 
+  outline: 0 !important;
+  font-family: 'Roboto-Thin';
+  letter-spacing: 2px;
+  margin: 5px;
+}
+.btnTec:hover , .btnTec:focus{
+  background: transparent;
+  border: 1px solid #fff;
+  color: #fff;
+  font-size: 18px;
+  height: 60px;
+  border-radius: 15px;
+  padding:0  25px;
+  margin-right:15px; 
+  font-family: 'Roboto-Thin';
+  letter-spacing: 2px;
+}
+}
+

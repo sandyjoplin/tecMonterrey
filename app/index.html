@@ -1,0 +1,162 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+  <meta charset="utf-8">
+  <title></title>
+  <title>Tecnólogico de Monterrey</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <link rel="shortcut icon" type="image/x-icon" href="favicon.png">
+  <meta property="og:image" content="images/img-meta.png" />
+  <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+  <!-- build:css(.) styles/vendor.css -->
+  <!-- bower:css -->
+  <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css" />
+  <!-- endbower -->
+  <!-- endbuild -->
+  <!-- build:css(.tmp) styles/main.css -->
+  <link rel="stylesheet" href="styles/main.css">
+  <!-- endbuild -->
+  <link href="https://use.fontawesome.com/releases/v5.0.8/css/all.css" rel="stylesheet">
+</head>
+
+<body ng-app="tecMonterreyApp">
+  <!--[if lte IE 8]>
+      <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+
+  <!-- Add your site or application content here -->
+  <div class="menuUno hidden-xs shadow">
+    <div class="container-fluid">
+      <div align="center">
+          <a href="#/"> <img src="images/tec logo-01.svg" class="img-responsive imgLogo" alt=""></a>
+        <div class="form-group">
+            <div class="icon-addon addon-lg">
+                <input type="text" placeholder="Busca tu causa o campus" class="form-control" id="">
+                <label for="" class="glyphicon glyphicon-search" rel="tooltip" title="Busca tu causa o campus"></label>
+            </div>
+        </div>
+      </div>
+      <div class="p40">
+          <ul class="navList">
+            <li><a href="#causa">Causa</a></li>
+            <li><a href="#campus">Campus</a></li>
+            <li><a href="#reporteAnual">Descarga reporte anual</a></li>
+            <p class="text-center p20 textSub f16">Conoce mas formas de ayudar</p>
+            <li><a href="#unetePromotor">Unete como promotor</a></li>
+            <li><a href="#herramientaProcuracion">Herramientas de procuración</a></li>
+          </ul>
+        </div>
+        <button class="btn btnDona center-block">DONA AHORA</button>
+        
+    </div>
+  </div>
+
+  <div class="header visible-xs">
+    <div class="navbar navbar-default" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#js-navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+
+          <a class="navbar-brand" href="#/">tecMonterrey</a>
+        </div>
+
+        <div class="collapse navbar-collapse" id="js-navbar-collapse">
+
+          <ul class="nav navbar-nav">
+            <li class="active">
+              <a href="#/">Home</a>
+            </li>
+            <li>
+              <a ng-href="#/about">About</a>
+            </li>
+            <li>
+              <a ng-href="#/">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="vistas">
+    <div ng-view=""></div>
+  
+  </div>
+  <footer>
+      <div class="container-fluid">
+  <div class="footer1 hidden-xs">
+      <div class="text-center fAlign">
+          <ul class="navListFooter">
+              <li><a href="">AVISO LEGAL  |</a></li>
+              <li><a href="">POLÍTICAS DE PRIVACIDAD  |</a></li>
+              <li><a href="">AVISO DE PRIVACIDAD  |</a></li>
+              <li><a href="">SOBRE EL SITIO</a></li>
+            </ul>
+      </div>
+  </div>
+  <div class="footer2">
+      <div class="">
+          <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+            <p class="fAlign">By <img src="images/footer/recaudia-logo-01.png" class="imgFooter" alt="recaudia"> empresa orgullosamente <span class="textFooter">EXATEC</span></p>
+          </div>
+          <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+          <div class="pull-right fAlign">
+              <a href="https://www.facebook.com/Recaudia/" target="_blank"><img src="images/footer/social media buttons-02.png" class="imgSocial" alt="facebook"></a>
+            <a href=""><img target="_blank" src="images/footer/social media buttons-03.png" class="imgSocial" alt="twitter"></a>
+            <a href=""><img target="_blank" src="images/footer/social media buttons-04.png" class="imgSocial" alt="instagram"></a>
+            <a href=""><img target="_blank" src="images/footer/social media buttons-05.png" class="imgSocial" alt="google mas"></a>
+            <a href=""><img target="_blank" src="images/footer/social media buttons-06.png" class="imgSocial" alt="you tube"></a>
+            <a href=""><img target="_blank" src="images/footer/social media buttons-07.png" class="imgSocial" alt="linked in"></a>
+          </div>
+          </div>
+                </div>
+  </div>
+      </div>
+    </footer>
+
+
+
+  <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
+  <script>
+    !function (A, n, g, u, l, a, r) {
+    A.GoogleAnalyticsObject = l, A[l] = A[l] || function () {
+      (A[l].q = A[l].q || []).push(arguments)
+    }, A[l].l = +new Date, a = n.createElement(g),
+      r = n.getElementsByTagName(g)[0], a.src = u, r.parentNode.insertBefore(a, r)
+    }(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+
+    ga('create', 'UA-XXXXX-X');
+    ga('send', 'pageview');
+  </script>
+
+  <!-- build:js(.) scripts/vendor.js -->
+  <!-- bower:js -->
+  <script src="bower_components/jquery/dist/jquery.js"></script>
+  <script src="bower_components/angular/angular.js"></script>
+  <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
+  <script src="bower_components/angular-animate/angular-animate.js"></script>
+  <script src="bower_components/angular-cookies/angular-cookies.js"></script>
+  <script src="bower_components/angular-resource/angular-resource.js"></script>
+  <script src="bower_components/angular-route/angular-route.js"></script>
+  <script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
+  <script src="bower_components/angular-touch/angular-touch.js"></script>
+  <!-- endbower -->
+  <!-- endbuild -->
+
+  <!-- build:js({.tmp,app}) scripts/scripts.js -->
+  <script src="scripts/app.js"></script>
+  <script src="scripts/controllers/main.js"></script>
+  <script src="scripts/controllers/about.js"></script>
+  <!-- endbuild -->
+</body>
+
+</html>
