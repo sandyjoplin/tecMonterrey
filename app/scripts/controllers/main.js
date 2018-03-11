@@ -8,10 +8,12 @@
  * Controller of the tecMonterreyApp
  */
 angular.module('tecMonterreyApp')
-  .controller('MainCtrl', function () {
-    this.awesomeThings = [
-      'HTML5 Boilerplate',
-      'AngularJS',
-      'Karma'
-    ];
+  .controller('MainCtrl', function ($scope, $location) {
+    new WOW().init();
+    $scope.toCausa = function () {
+      $location.url("/causa")
+    }
+    $scope.toCampus = function () {
+      $location.url("/campus")
+    }
   });

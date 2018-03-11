@@ -9,9 +9,6 @@
  */
 angular.module('tecMonterreyApp')
   .controller('CausaCtrl', function () {
-    this.awesomeThings = [
-      'HTML5 Boilerplate',
-      'AngularJS',
-      'Karma'
-    ];
+    new WOW().init();
+
   });

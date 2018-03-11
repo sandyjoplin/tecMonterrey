@@ -1,1 +1,468 @@
-<p>This is the dona view.</p>
+<section class="container-fluid p30">
+    
+    <div class="col-lg-6 col-md-8 col-sm-8 col-xs-12">
+        <div class="row">
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                    <div class="mtb40">
+                            <img style="width:100%;"ng-src="{{imgUrl}}">
+                        </div>
+            </div>
+            <!--<div class="col-lg-3 col-md-3 col-sm-3 col-xs-3">
+                <div ng-click="tabUnofn()">
+                    <p>paso 1</p>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3">
+                <div ng-click="tabDosfn()">
+                    <p>Paso 2</p>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3">
+                <div ng-click="tabTresfn()">
+                    <p>Paso 3</p>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3">
+                <div ng-click="tabCuatrofn()">
+                    <p>Paso 4</p>
+                </div>
+            </div>-->
+        </div>
+        <div ng-show="tabU">
+            <form name="formPasouno">
+                <div class="col-lg-12 col-md-12 col-sm-12">
+                    <div class="form-group formStep">
+                        <label for="causa" class="formLabel1">Causa</label>
+                        <input type="text" id="causa" name="causa" class="inputStep" placeholder="" required ng-model="pasoUno.causa">
+                    </div>
+                    <div class="form-group formStep">
+                        <label for="campus" class="formLabel1">Campus al que dirige su donativo</label>
+                        <div class="caja1">
+                            <select name="campus" id="campus" class="inputStep" required ng-model="pasoUno.campus">
+                                <option value="Guadalajara">Guadalajara</option>
+                                <option value="Toluca">Toluca</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group formStep">
+                        <label for="grupoDonativo" class="formLabel1">Tu donativo forma parte de algun grupo</label>
+                        <div class="caja1">
+                            <select name="grupoDonativo" id="grupoDonativo" class="inputStep" required ng-model="pasoUno.grupoDonativo">
+                                <option value="Option">Option</option>
+                                <option value="Option">Option</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-4 col-md-4 col-sm-4">
+                            <button type="button" class="btn btnPrecios">$50 MXN</button>
+                            <button type="button" class="btn btnPrecios">$500 MXN</button>
+                            <div class="form-group formStep">
+                                <label for="monto" class="formLabel1">Monto</label>
+                                <input type="number" id="monto" name="monto" class="inputStep" placeholder="" required ng-model="pasoUno.monto">
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-4 col-sm-4">
+                            <button type="button" class="btn btnPrecios">$100 MXN</button>
+                            <button type="button" class="btn btnPrecios">$1000 MXN</button>
+                        </div>
+                        <div class="col-lg-4 col-md-4 col-sm-4">
+                            <button type="button" class="btn btnPrecios">$250 MXN</button>
+                            <button type="button" class="btn btnPrecios">$5000 MXN</button>
+                        </div>
+                    </div>
+                    <div class="custom-checkbox text-center">
+                        <input type="checkbox" id="donativoMensual" name="donativoMensual" ng-model="pasoUno.donativoMensual">
+                        <label for="donativoMensual"> ¿Quieres que tu donativo sea mensual?</label>
+                    </div>
+                    <div class="text-center">
+                        <button type="button" class="btn btnFb">
+                            <i class="fab fa-facebook-f"></i> | Obtener datos de Facebook</button>
+                    </div>
+                    <br>
+                    <div class="form-group formStep">
+                        <label for="nombre" class="formLabel1">Nombre</label>
+                        <input type="text" id="nombre" name="nombre" class="inputStep" placeholder="" required ng-model="pasoUno.nombre">
+                    </div>
+                    <div class="form-group formStep">
+                        <label for="apellido" class="formLabel1">Apellido</label>
+                        <input type="text" id="apellido" name="apellido" class="inputStep" placeholder="" required ng-model="pasoUno.apellido">
+                    </div>
+                    <div class="form-group formStep">
+                        <label for="email" class="formLabel1">Correo eléctronico</label>
+                        <input type="email" id="email" name="email" class="inputStep" placeholder="" required ng-model="pasoUno.email">
+                    </div>
+                    <div class="form-group formStep">
+                        <label for="telefono" class="formLabel1">Teléfono</label>
+                        <input type="number" id="telefono" name="telefono" class="inputStep" placeholder="" required ng-model="pasoUno.telefono">
+                    </div>
+                    <div class="form-group formStep">
+                        <label for="conectado" class="formLabel1">¿Como te gustaria ser contactado?</label>
+                        <div class="caja1">
+                            <select name="conectado" id="conectado" class="inputStep" required ng-model="pasoUno.conectado">
+                                <option value="Option">Option</option>
+                                <option value="Option">Option</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-10 col-lg-offset-2 col-md-10 col-md-offset-2">
+                            <div class="col-lg-6 col-md-6">
+                                <span class="textForms text-center">¿Eres EXATEC/Alumno?</span>
+                            </div>
+
+                            <div class="col-lg-6 col-md-6">
+                                <span class="switch">
+                                    <input type="checkbox" class="switch-checkbox" name="alumno" id="alumno" checked required ng-model="pasoUno.alumno">
+                                    <label class="switch-label" for="alumno">
+                                        <span class="switch-inner"></span>
+                                        <span class="switch-switch"></span>
+                                    </label>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <button type="submit" class="btn btnForm center-block mtb40" ng-click="siguiente()">Continuar</button>
+                </div>
+            </form>
+        </div>
+        <div ng-show="tabD">
+            <div class="col-lg-12 col-md-12 col-sm-12">
+                <p class="textForms1">Método de pago</p>
+                <div class="row">
+                    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+                        <button type="button" class="btn btnPago" ng-click="setTab(1)">Tarjeta de debito</button>
+                    </div>
+                    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+                        <button type="button" class="btn btnPago" ng-click="setTab(2)">Tarjeta de Crédito</button>
+                    </div>
+                    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+                        <button type="button" class="btn btnPago" ng-click="setTab(3)">Oxxo</button>
+                    </div>
+                </div>
+                <br>
+                <div ng-show="isSet(1)">
+                    <form action="" name="formPago">
+                        <div class="form-group formStep">
+                            <label for="numeroTarjeta" class="formLabel1">Número de tarjeta</label>
+                            <input type="number" id="numeroTarjeta" name="numeroTarjeta" class="inputStep" placeholder="" required ng-model="pasoDos.numeroTarjeta">
+                        </div>
+                        <div class="form-group formStep">
+                            <label for="nombreTarjeta" class="formLabel1">Nombre del tarjeta habiente</label>
+                            <input type="text" id="nombreTarjeta" name="nombreTarjeta" class="inputStep" placeholder="" required ng-model="pasoDos.nombreTarjeta">
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+                                <div class="form-group formStep">
+                                    <label for="vencimientoUno" class="formLabel1">Vencimiento (mes)</label>
+                                    <div class="caja1">
+                                        <select name="vencimientoUno" id="vencimientoUno" class="inputStep" required ng-model="pasoDos.vencimientoUno">
+                                            <option value="Opcion">Opcion</option>
+                                            <option value="Opcion">Opcion</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+                                <div class="form-group formStep">
+                                    <label for="vencimientoDos" class="formLabel1">Vencimiento (año)</label>
+                                    <div class="caja1">
+                                        <select name="vencimientoDos" id="vencimientoDos" class="inputStep" required ng-model="pasoDos.vencimientoDos">
+                                            <option value="Opcion">Opcion</option>
+                                            <option value="Opcion">Opcion</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+                                <div class="form-group formStep">
+                                    <label for="cvv" class="formLabel1">Cvv</label>
+                                    <input type="number" id="cvv" name="cvv" class="inputStep" placeholder="" required ng-model="pasoDos.cvv">
+                                </div>
+                            </div>
+                        </div>
+                        <p class="textForms1 text-center">Una vez aprobado tu pago, se te solicitarán tus datos fiscales</p>
+                        <div class="custom-checkbox text-center">
+                            <input type="checkbox" id="terminos" name="terminos" ng-model="codiata.CAPITAL">
+                            <label for="terminos"> Acepto terminos y condiciones</label>
+                        </div>
+                    </form>
+                </div>
+                <div ng-show="isSet(2)">
+                    <form action="" name="formPago">
+                        <div class="form-group formStep">
+                            <label for="numeroTarjeta" class="formLabel1">Número de tarjeta</label>
+                            <input type="number" id="numeroTarjeta" name="numeroTarjeta" class="inputStep" placeholder="" required ng-model="pasoDos.numeroTarjeta">
+                        </div>
+                        <div class="form-group formStep">
+                            <label for="nombreTarjeta" class="formLabel1">Nombre del tarjeta habiente</label>
+                            <input type="text" id="nombreTarjeta" name="nombreTarjeta" class="inputStep" placeholder="" required ng-model="pasoDos.nombreTarjeta">
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+                                <div class="form-group formStep">
+                                    <label for="vencimientoUno" class="formLabel1">Vencimiento (mes)</label>
+                                    <div class="caja1">
+                                        <select name="vencimientoUno" id="vencimientoUno" class="inputStep" required ng-model="pasoDos.vencimientoUno">
+                                            <option value="Opcion">Opcion</option>
+                                            <option value="Opcion">Opcion</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+                                <div class="form-group formStep">
+                                    <label for="vencimientoDos" class="formLabel1">Vencimiento (año)</label>
+                                    <div class="caja1">
+                                        <select name="vencimientoDos" id="vencimientoDos" class="inputStep" required ng-model="pasoDos.vencimientoDos">
+                                            <option value="Opcion">Opcion</option>
+                                            <option value="Opcion">Opcion</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+                                <div class="form-group formStep">
+                                    <label for="cvv" class="formLabel1">Cvv</label>
+                                    <input type="number" id="cvv" name="cvv" class="inputStep" placeholder="" required ng-model="pasoDos.cvv">
+                                </div>
+                            </div>
+                        </div>
+                        <p class="textForms1 text-center">Una vez aprobado tu pago, se te solicitarán tus datos fiscales</p>
+                        <div class="custom-checkbox text-center">
+                            <input type="checkbox" id="terminos" name="terminos" ng-model="codiata.CAPITAL">
+                            <label for="terminos"> Acepto terminos y condiciones</label>
+                        </div>
+                    </form>
+                </div>
+                <div ng-show="isSet(3)">
+                    <p class="textForms1">A continuación puedes descargar tu cúpoon de pago en OXXO, el cual deberás imprimir y llevar a tu tienda
+                        OXXO más cercana.</p>
+                    <p class="textForms1">Pide al cajero que escanee el código de barras y realiza el pago que al mismo indique</p>
+                    <p class="textForms1">Si necesitas comprobante fiscal, comunicate con nosotros a la siguiente dirección de correo:
+                        <span class="textForms2">donativos@servicios.itesm.mx</span>
+                    </p>
+
+                    <div class="text-center">
+                        <a href="images/reporte/pdfprueba.pdf" download="FICHA DE PAGO OXXO" class="pdfDonwload">Descargar PDF</a>
+                    </div>
+                    <div class="custom-checkbox text-center">
+                        <input type="checkbox" id="terminos" name="terminos" ng-model="codiata.CAPITAL">
+                        <label for="terminos"> Acepto terminos y condiciones</label>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 mtb40">
+                    <button type="submit" class="btn btnForm center-block" ng-click="atras()">Regresar</button>
+                </div>
+                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 mtb40">
+                    <button type="submit" class="btn btnForm center-block" ng-click="siguiente()"ng-disabled="">Continuar</button>
+                </div>
+            </div>
+        </div>
+        <div ng-show="tabT">
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                <p class="text-center textForms3">¡Gracias por tu donativo!</p>
+                <div class="row ptb20">
+                    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+                        <a href="">
+                            <img src="images/dona/social media icons-04.png" class="img-responsive" alt="">
+                        </a>
+                    </div>
+                    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+                        <a href="">
+                            <img src="images/dona/social media icons-05.png" class="img-responsive" alt="">
+                        </a>
+                    </div>
+                    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+                        <a href="">
+                            <img src="images/dona/social media icons-06.png" class="img-responsive" alt="">
+                        </a>
+                    </div>
+                </div>
+                <div class="text-center">
+                    <button type="button" class="btn btnFb">No quiero comprobante fiscal</button>
+                </div>
+            </div>
+            <form action="" name="formComprobantefiscal">
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                    <p class="text-center textForms1 ptb20">Datos para comprobante fiscal</p>
+                    <div class="form-group formStep">
+                        <label for="rfc" class="formLabel1">RFC</label>
+                        <input type="text" id="rfc" name="rfc" class="inputStep" placeholder="" required ng-model="pasoTres.rfc">
+                    </div>
+                    <div class="form-group formStep">
+                        <label for="nombreRazon" class="formLabel1">Nombre o razón social</label>
+                        <input type="text" id="nombreRazon" name="nombreRazon" class="inputStep" placeholder="" required ng-model="pasoTres.nombreRazon">
+                    </div>
+                    <div class="form-group formStep">
+                        <label for="calleFiscal" class="formLabel1">Calle y número</label>
+                        <input type="text" id="calleFiscal" name="calleFiscal" class="inputStep" placeholder="" required ng-model="pasoTres.calleFiscal">
+                    </div>
+                    <div class="form-group formStep">
+                        <label for="codigoFiscal" class="formLabel1">Código postal</label>
+                        <input type="number" id="codigoFiscal" name="codigoFiscal" class="inputStep" placeholder="" required ng-model="pasoTres.codigoFiscal">
+                    </div>
+                    <div class="form-group formStep">
+                        <label for="paisFiscal" class="formLabel1">País</label>
+                        <input type="text" id="paisFiscal" name="paisFiscal" class="inputStep" placeholder="" required ng-model="pasoTres.paisFiscal">
+                    </div>
+                    <div class="form-group formStep">
+                        <label for="estadoFiscal" class="formLabel1">Estado</label>
+                        <input type="text" id="estadoFiscal" name="estadoFiscal" class="inputStep" placeholder="" required ng-model="pasoTres.estadoFiscal">
+                    </div>
+                    <div class="form-group formStep">
+                        <label for="ciudadFiscal" class="formLabel1">Ciudad</label>
+                        <input type="text" id="ciudadFiscal" name="ciudadFiscal" class="inputStep" placeholder="" required ng-model="pasoTres.ciudadFiscal">
+                    </div>
+                    <div class="form-group formStep">
+                        <label for="coloniaFiscal" class="formLabel1">Colonia</label>
+                        <input type="text" id="coloniaFiscal" name="coloniaFiscal" class="inputStep" placeholder="" required ng-model="pasoTres.coloniaFiscal">
+                    </div>
+                    <button type="submit" class="btn btnForm center-block mtb40" ng-click="siguiente()">Enviar</button>
+                </div>
+            </form>
+        </div>
+        <div ng-show="tabCu">
+            <form action="" name="formDatosusuario">
+                <p class="text-center textForms3">Queremos conocer más de ti:</p>
+                <div class="form-group formStep">
+                    <label for="pais" class="formLabel1">País</label>
+                    <input type="text" id="pais" name="pais" class="inputStep" placeholder="" required ng-model="pasoCuatro.pais">
+                </div>
+                <div class="form-group formStep">
+                    <label for="calle" class="formLabel1">Calle y número</label>
+                    <input type="text" id="calle" name="calle" class="inputStep" placeholder="" required ng-model="pasoCuatro.calle">
+                </div>
+                <div class="form-group formStep">
+                    <label for="codigo" class="formLabel1">Código postal</label>
+                    <input type="number" id="codigo" name="codigo" class="inputStep" placeholder="" required ng-model="pasoCuatro.codigo">
+                </div>
+                <div class="form-group formStep">
+                    <label for="ciudad" class="formLabel1">Ciudad</label>
+                    <input type="text" id="ciudad" name="ciudad" class="inputStep" placeholder="" required ng-model="pasoCuatro.ciudad">
+                </div>
+                <div class="form-group formStep">
+                    <label for="estado" class="formLabel1">Estado</label>
+                    <input type="text" id="estado" name="estado" class="inputStep" placeholder="" required ng-model="pasoCuatro.estado">
+                </div>
+                <div class="form-group formStep">
+                    <label for="sexo" class="formLabel1">Sexo</label>
+                    <input type="text" id="sexo" name="sexo" class="inputStep" placeholder="" required ng-model="pasoCuatro.sexo">
+                </div>
+                <div class="row">
+                    <div class="col-lg-12 col-md-12 col-sm-12">
+                        <p class="textForms1">Fecha de nacimiento</p>
+                    </div>
+                    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+                        <div class="form-group formStep">
+                            <label for="dia" class="formLabel1">Día</label>
+                            <div class="caja1">
+                                <select name="dia" id="camdiapus" class="inputStep" required ng-model="pasoCuatro.dia">
+                                    <option value="Opcion">Opcion</option>
+                                    <option value="Opcion">Opcion</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+                        <div class="form-group formStep">
+                            <label for="mes" class="formLabel1">Mes</label>
+                            <div class="caja1">
+                                <select name="mes" id="mes" class="inputStep" required ng-model="pasoCuatro.mes">
+                                    <option value="Opcion">Opcion</option>
+                                    <option value="Opcion">Opcion</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+                        <div class="form-group formStep">
+                            <label for="year" class="formLabel1">Año</label>
+                            <div class="caja1">
+                                <select name="year" id="year" class="inputStep" required ng-model="pasoCuatro.year">
+                                    <option value="Opcion">Opcion</option>
+                                    <option value="Opcion">Opcion</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group formStep">
+                    <label for="invito" class="formLabel1">¿Quien te invito a donar?</label>
+                    <input type="text" id="invito" name="invito" class="inputStep" placeholder="" required ng-model="pasoCuatro.invito">
+                </div>
+                <p class="textForms1 text-center">¿Te gustaria invitar a donar a un amigo? Esrcribe su correo para enviar la invitación</p>
+                <div class="form-group formStep">
+                    <label for="invitar" class="formLabel1">Invitar a un amigo</label>
+                    <input type="email" id="invitar" name="invitar" class="inputStep" placeholder="" required ng-model="pasoCuatro.invitar">
+                </div>
+                <div class="row">
+                    <div class="col-lg-12">
+                        <p class="textForms1">EXATEC / Alumno</p>
+                    </div>
+                    <div class="col-lg-6 col-md-6 col-sm-6">
+
+                        <div class="form-group formStep">
+                            <label for="matricula" class="formLabel1">Matricula</label>
+                            <input type="text" id="matricula" name="matricula" class="inputStep" placeholder="" required ng-model="pasoCuatro.matricula">
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-6 col-sm-6">
+                        <div class="form-group formStep">
+                            <label for="campus" class="formLabel1">Campus</label>
+                            <input type="text" id="campus" name="campus" class="inputStep" placeholder="" required ng-model="pasoCuatro.campus">
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                        <div class="col-lg-10 col-lg-offset-2 col-md-10 col-md-offset-2">
+                            <div class="col-lg-6 col-md-6">
+                                <span class="textForms text-center">Asociación EXATEC</span>
+                            </div>
+
+                            <div class="col-lg-6 col-md-6">
+                                <span class="switch">
+                                    <input type="checkbox" class="switch-checkbox" name="asociacion" id="asociacion" checked required ng-model="pasoCuatro.asociacion">
+                                    <label class="switch-label" for="asociacion">
+                                        <span class="switch-inner"></span>
+                                        <span class="switch-switch"></span>
+                                    </label>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <br>
+                    <div class="row">
+                            <div class="col-lg-10 col-lg-offset-2 col-md-10 col-md-offset-2">
+                                <div class="col-lg-6 col-md-6">
+                                    <span class="textForms text-center">¿Eres colaborador TEC? </span>
+                                </div>
+    
+                                <div class="col-lg-6 col-md-6">
+                                    <span class="switch">
+                                        <input type="checkbox" class="switch-checkbox" name="colaborador" id="colaborador" checked required ng-model="pasoCuatro.colaborador">
+                                        <label class="switch-label" for="colaborador">
+                                            <span class="switch-inner"></span>
+                                            <span class="switch-switch"></span>
+                                        </label>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                <div class="row">
+                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 mtb40">
+                        <button type="submit" class="btn btnForm center-block" ng-click="" ng-disabled="formDatosusuario.$invalid">Enviar</button>
+                    </div>
+                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 mtb40">
+                        <button type="submit" class="btn btnForm center-block" ng-click="toHome()" ng-disabled="">salir</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+    <div class="col-lg-6 col-md-4 col-sm-4 col-xs-12 text-center">
+        <img src="images/dona/donar-01.png" class="img-responsive" alt="">
+    </div>
+</section>

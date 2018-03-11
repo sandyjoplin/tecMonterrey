@@ -1,1 +1,82 @@
-<p>This is the unete view.</p>
+<section class="container-fluid p30">
+    <div class="row">
+        <div class="col-lg-12 col-md-12 col-sm-12">
+            <h2>Únete como promotor</h2>
+            <p class="formLabel">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum itaque beatae laboriosam quam magnam quidem, necessitatibus
+                autem modi inventore quod soluta optio nesciunt! Deleniti ipsum tempore quisquam blanditiis laborum magnam!</p>
+            <br>
+        </div>
+        <form name="formUnetepromotor">
+            <div class="col-lg-6 col-md-6 col-sm-6">
+                <div class="form-group">
+                    <label for="nombre" class="formLabel">Nombre (s)</label>
+                    <input type="text" id="nombre" name="nombre" class="form-control bRadius" placeholder="" required ng-model="unete.nombre">
+                    <p class="obligatorio text-center" ng-show="formUnetepromotor.nombre.$error.required"> Campo obligatorio</p>
+                </div>
+
+                <div class="form-group">
+                    <label for="mailUno" class="formLabel">Corre electrónico (ITESM)</label>
+                    <input type="email" class="form-control bRadius" id="mailUno" name="mailUno" placeholder="" required ng-model="unete.mailUno">
+                    <p class="obligatorio text-center" ng-show="formUnetepromotor.mailUno.$error.required"> Campo obligatorio</p>
+                </div>
+                <div class="form-group">
+                    <label for="passUno" class="formLabel">Contraseña</label>
+                    <input type="password" class="form-control bRadius" id="passUno" name="passUno" placeholder="" required ng-model="unete.passUno">
+                    <p class="obligatorio text-center" ng-show="formUnetepromotor.passUno.$error.required"> Campo obligatorio</p>
+                </div>
+                <div class="form-group">
+                    <label for="nomina" class="formLabel">Nómina</label>
+                    <input type="text" class="form-control bRadius" id="nomina" name="nomina" placeholder="" required ng-model="unete.nomina">
+                    <p class="obligatorio text-center" ng-show="formUnetepromotor.nomina.$error.required"> Campo obligatorio</p>
+                </div>
+                <label for="campus" class="formLabel">Campus</label>
+                <div class="caja">
+                    <select name="campus" id="campus" class="bRadius" required ng-model="unete.campus">
+                        <option value="fisica">Fisica</option>
+                        <option value="moral">Moral</option>
+                    </select>
+                </div>
+                <br>
+                <p class="obligatorio text-center" ng-show="formUnetepromotor.campus.$error.required">Campo obligatorio</p>
+                <div class="form-group">
+                    <label for="imagen" class="formLabel"> Seleccionar imagen para perfil
+                    </label>
+                    <div class="">
+                    <input class="" type="file" name="imagen" id="imagen" required ng-model="unete.imagen">
+                </div>
+                    <p class="obligatorio text-center" ng-show="formUnetepromotor.imagen.$error.required"> Campo obligatorio</p>
+                </div>
+            </div>
+            <div class="col-lg-6 col-md-6 col-sm-6">
+                <div class="form-group">
+                    <label for="apellido" class="formLabel">Apellido (s)</label>
+                    <input type="text" class="form-control bRadius" id="apellido" name="apellido" placeholder="" required ng-model="unete.apellido">
+                    <p class="obligatorio text-center" ng-show="formUnetepromotor.apellido.$error.required"> Campo obligatorio</p>
+                </div>
+                <div class="form-group">
+                    <label for="mailDos" class="formLabel">Confirma correo electrónico</label>
+                    <input type="email" class="form-control bRadius" id="mailDos" name="mailDos" placeholder="" required ng-model="unete.mailDos">
+                    <p class="obligatorio text-center" ng-show="formUnetepromotor.mailDos.$error.required"> Campo obligatorio</p>
+                </div>
+                <div class="form-group">
+                    <label for="passDos" class="formLabel">Confirma Contraseña</label>
+                    <input type="password" class="form-control bRadius" id="passDos" name="passDos" placeholder="" required ng-model="unete.passDos">
+                    <p class="obligatorio text-center" ng-show="formUnetepromotor.passDos.$error.required"> Campo obligatorio</p>
+                </div>
+                <div class="form-group">
+                    <label for="puesto" class="formLabel">Puesto</label>
+                    <input type="text" class="form-control bRadius" id="puesto" name="puesto" placeholder="" required ng-model="unete.puesto">
+                    <p class="obligatorio text-center" ng-show="formUnetepromotor.puesto.$error.required"> Campo obligatorio</p>
+                </div>
+                <div class="form-group">
+                    <label for="socio" class="formLabel">Socio (Director del campus)</label>
+                    <input type="texte" class="form-control bRadius" id="socio" name="socio" placeholder="" required ng-model="unete.socio">
+                    <p class="obligatorio text-center" ng-show="formUnetepromotor.socio.$error.required"> Campo obligatorio</p>
+                </div>
+            </div>
+            <div class="col-lg-12 col-md-12 col-sm-12">
+                <button type="submit" class="btn btnForm center-block" ng-click="" ng-disabled="formBancarios.$invalid">ENVIAR</button>
+            </div>
+        </form>
+    </div>
+</section>
